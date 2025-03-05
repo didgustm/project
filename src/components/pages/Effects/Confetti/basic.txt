@@ -1,0 +1,13 @@
+import confetti from "canvas-confetti";
+
+const canvas = document.getElementById("canvas");
+const myConfetti = confetti.create(canvas, {
+    resize: true,
+    useWorker: true,
+});
+myConfetti({
+    particleCount: 100,
+    origin: {
+        y: 1
+    }
+});

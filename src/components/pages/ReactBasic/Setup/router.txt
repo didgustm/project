@@ -1,0 +1,47 @@
+- install
+npm i react-router-dom
+
+- Routes
+import { lazy, memo } from "react";
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "@components/templates/Layout";
+
+const MemoLayout = memo(Layout);
+
+const Effects = lazy(() => import("@pages/Effects"));
+const Setup = lazy(() => import("@pages/ReactBasic/Setup"));
+const Hook = lazy(() => import("@pages/ReactBasic/Hook"));
+
+export const Router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MemoLayout />,
+        children: [
+            {
+                path: "effects",
+                element: <Effects />,
+            },
+            {
+                path: "react-basic",
+                children: [
+                    {
+                        path: "setup",
+                        element: <Setup />
+                    },
+                    {
+                        path: "hook",
+                        element: <Hook />
+                    }
+                ]
+            }
+        ],
+    },
+]);
+
+- App
+import { RouterProvider } from "react-router-dom";
+import { Router } from "Routes";
+
+function App() {
+    return <RouterProvider router={Router} />
+}

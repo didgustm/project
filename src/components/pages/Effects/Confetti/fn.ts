@@ -1,0 +1,88 @@
+import confetti from "canvas-confetti";
+export const basicClick = (ref: any) => {
+    if (ref) {
+        const myConfetti = confetti.create(ref.current, {
+            resize: true,
+            useWorker: true,
+        });
+        myConfetti({
+            particleCount: 100,
+            origin: {
+                y: 1,
+            },
+        });
+    }
+};
+
+function createParticles(ref: any, x: number, y: number) {
+    const particle = document.createElement("span");
+    const destinationX = (Math.random() - 0.5) * 300;
+    const destinationY = (Math.random() - 0.5) * 300;
+    const rotation = Math.random() * 520;
+    const randomIndx = Math.floor(Math.random() * 5);
+
+    particle.style.position = "absolute";
+    particle.style.width = `${Math.random() * (17 - 8) + 8}px`;
+    particle.style.height = particle.style.width;
+    particle.style.backgroundColor = [
+        `#4E74BE`,
+        `#FFE100`,
+        `#FF7B31`,
+        `#51C26A`,
+        `#FF4330`,
+    ][randomIndx];
+    ref.current.append(particle);
+
+    const animation = particle.animate(
+        [
+            {
+                transform: `translate(${x + destinationX * 0.3}px, ${
+                    y + destinationY * 0.3
+                }px) rotate(0deg)`,
+                opacity: 1,
+            },
+            {
+                transform: `translate(${x + destinationX * 0.6}px, ${
+                    y + destinationY * 0.6
+                }px) rotate(${rotation * 0.5}deg)`,
+                opacity: 1,
+            },
+            {
+                opacity: 1,
+            },
+            {
+                transform: `translate(${x + destinationX}px, ${
+                    y + destinationY
+                }px) rotate(${rotation * 0.85}deg)`,
+                opacity: 0,
+                offset: 0.9,
+            },
+            {
+                transform: `translate(${x + destinationX}px, ${
+                    y + destinationY
+                }px) rotate(${rotation * 0.85}deg)`,
+                opacity: 0,
+                offset: 1,
+                // offset 1 essential value
+            },
+        ],
+        {
+            duration: Math.random() * (2500 - 2000) + 2000,
+            easing: "cubic-bezier(0.09, 0.92, 1, 1)",
+            delay: 0,
+            fill: "forwards",
+        }
+    );
+    animation.onfinish = function (e) {
+        if (e.target) {
+            particle.remove();
+        }
+    };
+}
+
+export const customClick = (ref: any) => {
+    const amount = 20;
+    for (let i = 0; i < amount; i++) {
+        createParticles(ref, 150, 150);
+    }
+};

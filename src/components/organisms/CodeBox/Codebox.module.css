@@ -1,0 +1,19 @@
+.codeBox {
+    font-family: mont;
+    line-height: 1.35;
+    padding: 2rem;
+    margin: 2rem 0;
+    background: var(--color-lightgray);
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+.codeBox pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+@media (max-width: 768.99px) {
+    .codeBox {
+        font-size: 1.3rem;
+    }
+}

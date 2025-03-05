@@ -1,0 +1,8 @@
+import { useRef } from "react";
+
+...
+const ref = useRef(null);
+...
+return (
+    <div ref={ref}></div>
+)

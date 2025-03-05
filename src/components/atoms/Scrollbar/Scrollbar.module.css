@@ -1,0 +1,29 @@
+.scrollBar {
+    position: fixed;
+    top: 4px;
+    bottom: 4px;
+    right: 2px;
+    width: 4px;
+    z-index: 100;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+.scrollBar.scrolling {
+    opacity: 1;
+    transition: none;
+}
+.scrollThumb {
+    width: 100%;
+    background: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.scrollThumb:hover {
+    background: #aaa;
+}
+
+@media (max-width: 768.99px) {
+    .scrollBar.hide {
+        opacity: 0;
+    }
+}

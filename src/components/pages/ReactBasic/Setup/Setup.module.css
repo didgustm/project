@@ -1,0 +1,18 @@
+.subTitle {
+    font-size: 1.6rem;
+    font-variation-settings: "wght" 550;
+}
+.script {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.dt {
+    font-size: 1.5rem;
+    font-variation-settings: "wght" 450;
+    margin-bottom: 0.5rem;
+}
+.small {
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    opacity: 0.8;
+}

@@ -1,0 +1,28 @@
+- Context
+import { createContext } from "react";
+
+export const scrollY: number = createContext(0)
+
+- Provider
+import { BasicContext } from "context/basic";
+import { Header, Footer, Aside } from "@components/organisms";
+
+...
+const scrollY = 100;
+
+return (
+    <BasicContext.Provider value={{ scrollY }}>
+    <div id="app">
+        {children}
+    </div>
+    </BasicContext.Provider>
+);
+...
+
+- Component
+import { useContext } from "React";
+import { BasicContext } from "context/basic";
+
+...
+const { scrollY } = useContext(BasicContext);
+...

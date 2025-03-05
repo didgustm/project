@@ -1,0 +1,122 @@
+/* Fonts */
+@font-face {
+    font-family: "pre";
+    src: url(./assets/fonts/Pretendard-vf.woff2) format(woff2);
+}
+@font-face {
+    font-family: "mont";
+    src: url(./assets/fonts/Montserrat-vf.woff) format(woff);
+}
+:root {
+    --color-main: #00b493;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #b7b7b7;
+    --color-lightgray: #f7f7f7;
+    --color-deepgray: #808080;
+    --color-text: #272727;
+    font: 400 10px/1 mont, pre;
+    letter-spacing: -0.04em;
+    touch-action: manipulation;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1;
+    line-height: inherit;
+}
+body,
+html,
+h1,
+h2,
+h3,
+ul,
+dl,
+dd,
+header,
+footer,
+aside,
+p,
+button,
+pre {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+pre,
+code {
+    font: inherit;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a,
+button,
+*[role="link"] {
+    -webkit-tap-highlight-color: transparent;
+}
+strong {
+    font-variation-settings: "wght" 700;
+}
+::selection {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Common */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root {
+    height: 100vh;
+    font-size: 1.4rem;
+    font-variation-settings: "wght" 400;
+    color: var(--color-text);
+    overflow-y: scroll;
+}
+.subTitle {
+    font-size: 1.6rem;
+    font-variation-settings: "wght" 550;
+}
+.script {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.script > *:not(.dt, .eg, .small) {
+    display: flex;
+    gap: 0.5rem;
+    word-break: keep-all;
+}
+.script > *:not(.dt, .eg, .small)::before {
+    content: "· ";
+}
+.dt {
+    font-size: 1.5rem;
+    font-variation-settings: "wght" 450;
+    margin-bottom: 0.5rem;
+}
+.small {
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    color: var(--color-deepgray);
+}

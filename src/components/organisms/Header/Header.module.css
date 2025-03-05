@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header.fix {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+}
+.logo a div {
+    line-height: 1.25;
+}
+.ico {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-white);
+    background: var(--color-main);
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 900;
+}
+.btn_wrap {
+    display: none;
+}
+.btn_wrap button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 20px;
+    height: 20px;
+}
+.btn_wrap span {
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--color-gray);
+    transition: transform 0.4s;
+}
+
+@media (max-width: 768.99px) {
+    .btn_wrap {
+        display: block;
+    }
+    .open {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .open span {
+        transform: translateY(var(--y)) rotate(var(--r));
+    }
+    .open .line01 {
+        --y: 4px;
+        --r: 45deg;
+    }
+    .open .line02 {
+        --y: -4px;
+        --r: -45deg;
+    }
+}

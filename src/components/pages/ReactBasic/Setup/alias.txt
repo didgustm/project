@@ -1,0 +1,19 @@
+- install
+npm run  i -D vite-tsconfig-paths @types/node
+
+- vitconfig
+import tsConfigPaths from "vite-tsconfig-paths"
+export default defineConfig({
+    plugins: [react(), tsConfigPaths()],
+});
+
+- tsconfig
+"compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+        "@assets/*": ["assets/*"],
+        "@components/*": ["components/*"],
+        "@pages/*": ["components/pages/*"],
+        "@utils/*": ["utils/*"]
+    }
+}
