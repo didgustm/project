@@ -39,15 +39,19 @@ function Detail({ descript, img }: { descript: any; img?: any }) {
                                                 {subjects[index]}
                                             </p>
                                             <p className={styles.value}>
-                                                <Link
-                                                    to={`//${value}`}
-                                                    style={{
-                                                        color: "var(--color-main)",
-                                                    }}
-                                                    target="_blank"
-                                                >
-                                                    {value}
-                                                </Link>
+                                                {value === "" ? (
+                                                    "-"
+                                                ) : (
+                                                    <Link
+                                                        to={`//${value}`}
+                                                        style={{
+                                                            color: "var(--color-main)",
+                                                        }}
+                                                        target="_blank"
+                                                    >
+                                                        {value}
+                                                    </Link>
+                                                )}
                                             </p>
                                         </li>
                                     );
@@ -67,13 +71,15 @@ function Detail({ descript, img }: { descript: any; img?: any }) {
                         })}
                     </ul>
                 </div>
-                {img && <div className={styles.view}>
-                    <img
-                        src={img}
-                        alt={`${values[0]} 미리보기 이미지`}
-                        className={styles.img}
-                    />
-                </div>}
+                {img && (
+                    <div className={styles.view}>
+                        <img
+                            src={img}
+                            alt={`${values[0]} 미리보기 이미지`}
+                            className={styles.img}
+                        />
+                    </div>
+                )}
             </div>
         </Section>
     );

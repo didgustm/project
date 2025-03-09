@@ -7,7 +7,7 @@ import particleCode from "./particle.txt";
 function Confetti() {
     const basicRef = useRef<HTMLCanvasElement>(null);
     const particleRef = useRef<HTMLDivElement>(null);
-    const partyRef = useRef<HTMLDivElement>(null);
+    // const partyRef = useRef<HTMLDivElement>(null);
 
     
 
@@ -31,9 +31,9 @@ function Confetti() {
                     style={{ position: "relative", width: 300, height: 300 }}
                 ></div>
             </MotionBox>
-            <MotionBox title="3D Svg 콘페티" desc="party-js" useClick={false}>
+            {/* <MotionBox title="3D Svg 콘페티" desc="party-js" useClick={false}>
                 <div ref={partyRef} style={{ width: 300, height: 300 }}></div>
-            </MotionBox>
+            </MotionBox> */}
         </>
     );
 }

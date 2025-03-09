@@ -1,0 +1,4 @@
+.scrollInner {
+    height: 200vh;
+    background: linear-gradient(180deg, var(--color-lightgray), var(--color-deepgray), #000)
+}

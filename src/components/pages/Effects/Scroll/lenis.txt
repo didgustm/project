@@ -1,0 +1,13 @@
+import { useRef } from "react";
+import { ReactLenis } from "lenis/react";
+
+function SmoothScroll() {
+    const scrollContainerRef = useRef<any>(null);
+    return (
+        <ReactLenis ref={scrollContainerRef}>
+            ...
+        </ReactLenis>
+    );
+}
+
+export default SmoothScroll;

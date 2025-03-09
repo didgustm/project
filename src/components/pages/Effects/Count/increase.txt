@@ -1,0 +1,13 @@
+const ele = document.querySelector(".value");
+let startNum = 0;
+const val = 4300;
+
+const timer = setInterval(() => {
+    const steps = (val * 40) / 1500;
+    startNum += steps;
+    ele.innerHTML = Math.round(startNum).toLocaleString("ko-KR");
+    if (startNum > val) {
+        ele.innerHTML = val.toLocaleString("ko-KR");
+        clearInterval(timer);
+    }
+}, 40);

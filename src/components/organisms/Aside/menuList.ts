@@ -1,7 +1,15 @@
 export const menuList = [
     {
+        url: "intro",
+        name: "Intro"
+    },
+    {
         url: "works",
         name: "Works"
+    },
+    {
+        url: "effects",
+        name: "Effects",
     },
     {
         url: "react-basic",
@@ -16,17 +24,13 @@ export const menuList = [
                 name: "Hook"
             },
             {
+                url: "/react-basic/redux",
+                name: "Redux"
+            },
+            {
                 url: "/react-basic/store",
                 name: "Store"
             },
-            {
-                url: "/react-basic/redux",
-                name: "Redux"
-            }
         ]
-    },
-    {
-        url: "effects",
-        name: "Effects",
     },
 ];

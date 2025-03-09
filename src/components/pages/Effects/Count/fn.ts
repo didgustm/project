@@ -43,3 +43,21 @@ export const basicCount = (ref: any) => {
         });
     }
 }
+
+export const increaseCount = (ref: any) => {
+    let startNum = 0;
+    const val = 4300;
+
+    const timer = setInterval(() => {
+        const steps = (val * 40) / 1500;
+        startNum += steps;
+        if (ref.current) {
+            ref.current.innerHTML =
+                Math.round(startNum).toLocaleString("ko-KR");
+            if (startNum > val) {
+                ref.current.innerHTML = val.toLocaleString("ko-KR");
+                clearInterval(timer);
+            }
+        }
+    }, 40);
+}
