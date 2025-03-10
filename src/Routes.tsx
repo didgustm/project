@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "@components/templates/Layout";
 
 const MemoLayout = memo(Layout);
-
+const Main = lazy(() => import("@pages/Main"));
 /** Effects */
 const Effects = lazy(() => import("@pages/Effects"));
 const Confetti = lazy(() => import("@pages/Effects/Confetti"));
@@ -18,7 +18,7 @@ const Store = lazy(() => import("@pages/ReactBasic/Store"));
 const Redux = lazy(() => import("@pages/ReactBasic/Redux"));
 
 /** Intro */
-const Intro =  lazy(() => import("@pages/Intro"));
+const About =  lazy(() => import("@components/pages/About"));
 
 /** Works */
 const Works = lazy(() => import("@pages/Works"));
@@ -39,6 +39,10 @@ export const Router = createBrowserRouter([
         path: "/",
         element: <MemoLayout />,
         children: [
+            {
+                path: "",
+                element: <Main />
+            },
             {
                 path: "effects",
                 element: <Effects />,
@@ -139,8 +143,8 @@ export const Router = createBrowserRouter([
                 ],
             },
             {
-                path: "Intro",
-                element: <Intro />
+                path: "about",
+                element: <About />
             }
         ],
     },
