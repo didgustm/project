@@ -20,19 +20,27 @@ const Redux = lazy(() => import("@pages/ReactBasic/Redux"));
 /** Intro */
 const About =  lazy(() => import("@components/pages/About"));
 
-/** Works */
+/**
+ * Works
+ * Projects
+ */
 const Works = lazy(() => import("@pages/Works"));
-const Atgc = lazy(() => import("@pages/Works/Atgc"));
-const AdmPlatform = lazy(() => import("@pages/Works/AdmPlatform"));
-const CoreVac = lazy(() => import("@pages/Works/Corevac"));
-const Airclean = lazy(() => import("@pages/Works/Airclean"));
-const KBDesignSystem = lazy(() => import("@pages/Works/KBDesignSystem"));
-const RefinanceLoan = lazy(() => import("@pages/Works/RefinanceLoan"));
-const LoanComparisonCredit = lazy(() => import("@pages/Works/LoanComparisonCredit"));
-const AptManagementFee = lazy(() => import("@pages/Works/AptManagementFee"));
-const Safebox = lazy(() => import("@pages/Works/Safebox"));
-const Fund = lazy(() => import("@pages/Works/Fund"));
-const Withdrawal = lazy(() => import("@pages/Works/Withdrawal"));
+const Atgc = lazy(() => import("@pages/Works/Projects/Atgc"));
+const AdmPlatform = lazy(() => import("@pages/Works/Projects/AdmPlatform"));
+const CoreVac = lazy(() => import("@pages/Works/Projects/Corevac"));
+const Airclean = lazy(() => import("@pages/Works/Projects/Airclean"));
+const KBDesignSystem = lazy(() => import("@pages/Works/Projects/KBDesignSystem"));
+const FHDealer  = lazy(() => import("@pages/Works/Projects/FasthunterDealer"));
+const Fasthunter = lazy(() => import("@pages/Works/Projects/Fasthunter"));
+/** Works > Landing */
+const RefinanceLoan = lazy(() => import("@pages/Works/Landings/RefinanceLoan"));
+const LoanComparisonCredit = lazy(() => import("@pages/Works/Landings/LoanComparisonCredit"));
+const AptManagementFee = lazy(() => import("@pages/Works/Landings/AptManagementFee"));
+const Safebox = lazy(() => import("@pages/Works/Landings/Safebox"));
+const Fund = lazy(() => import("@pages/Works/Landings/Fund"));
+const Withdrawal = lazy(() => import("@pages/Works/Landings/Withdrawal"));
+const HeartDelivery = lazy(() => import("@pages/Works/Landings/HeartDelivery"));
+const Ddokgu = lazy(() => import("@pages/Works/Landings/Ddokgu"));
 
 export const Router = createBrowserRouter([
     {
@@ -117,6 +125,14 @@ export const Router = createBrowserRouter([
                         element: <Airclean />
                     },
                     {
+                        path: "fhdealer",
+                        element: <FHDealer />
+                    },
+                    {
+                        path: "fasthunter",
+                        element: <Fasthunter />
+                    },
+                    {
                         path: "refinanceLoan",
                         element: <RefinanceLoan />
                     },
@@ -139,6 +155,14 @@ export const Router = createBrowserRouter([
                     {
                         path: "withdrawal",
                         element: <Withdrawal />
+                    },
+                    {
+                        path: "heartDelivery",
+                        element: <HeartDelivery />
+                    },
+                    {
+                        path: "ddokgu",
+                        element: <Ddokgu />
                     }
                 ],
             },

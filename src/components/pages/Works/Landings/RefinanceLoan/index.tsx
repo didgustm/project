@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { landings } from "../list";
+import { landings } from "../../list";
 import refinanceLoanView from "@assets/images/works/refinanceLoan.webp"
 
 function RefinanceLoan () {

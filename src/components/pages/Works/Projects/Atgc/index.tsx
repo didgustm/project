@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { projects } from "../list";
+import { projects } from "../../list";
 import atgcView from "@assets/images/works/atgcbio.webp";
 
 function Atgc () {

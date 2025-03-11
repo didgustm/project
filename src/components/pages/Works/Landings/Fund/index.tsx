@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { landings } from "../list";
+import { landings } from "../../list";
 import fundView from "@assets/images/works/fund.webp"
 
 function Fund () {

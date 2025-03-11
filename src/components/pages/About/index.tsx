@@ -21,6 +21,11 @@ import svelteImg from "@assets/images/intro/svelte.svg";
 import editplusImg from "@assets/images/intro/editplus.webp";
 import phpImg from "@assets/images/intro/php.svg";
 import laravelImg from "@assets/images/intro/laravel.svg";
+import soomgoImg from "@assets/images/intro/soomgo.webp";
+import kmongImg from "@assets/images/intro/kmong.webp";
+import kakaoImg from "@assets/images/intro/kakao.svg";
+import instagramImg from "@assets/images/intro/instagram.svg";
+import emailImg from "@assets/images/intro/email.svg";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -28,8 +33,7 @@ function About() {
     /**
      * 이름, 사진
      * 폰번호??
-     * 사용 스킬 - scale 크기로 숙련도 순서
-     * 스와이프 형식으로 해도 될듯??
+     * contact 링크 연결하기
      */
     return (
         <Section title="About me">
@@ -178,36 +182,61 @@ function About() {
                 <li>
                     <p className={styles.subject}>Contact</p>
                     <div className={`${styles.value} ${styles.contact}`}>
-                        <p>
-                            <span className={styles.dt}>카카오톡</span>
+                        <div>
+                            <div className={styles.dt}>
+                                <span>
+                                    <img src={kakaoImg} alt="" />
+                                </span>
+                                카카오톡
+                            </div>
                             <button type="button" className={styles.themeColor}>
                                 bw03306@naver.com
                             </button>
-                        </p>
-                        <p>
-                            <span className={styles.dt}>이메일</span>
+                        </div>
+                        <div>
+                            <div className={styles.dt}>
+                                <span>
+                                    <img src={emailImg} alt="" />
+                                </span>
+                                이메일
+                            </div>
                             <button type="button" className={styles.themeColor}>
-                                didgustm12@naver.com
+                                bw03306@gmail.com
                             </button>
-                        </p>
-                        <p>
-                            <span className={styles.dt}>인스타그램(DM)</span>
+                        </div>
+                        <div>
+                            <div className={styles.dt}>
+                                <span>
+                                    <img src={instagramImg} alt="" />
+                                </span>
+                                DM
+                            </div>
                             <button type="button" className={styles.themeColor}>
                                 jegalryanghyun
                             </button>
-                        </p>
-                        <p>
-                            <span className={styles.dt}>크몽</span>
+                        </div>
+                        <div>
+                            <div className={styles.dt}>
+                                <span>
+                                    <img src={kmongImg} alt="" />
+                                </span>
+                                크몽
+                            </div>
                             <button type="button" className={styles.themeColor}>
                                 크몽 계정
                             </button>
-                        </p>
-                        <p>
-                            <span className={styles.dt}>숨고</span>
+                        </div>
+                        <div>
+                            <div className={styles.dt}>
+                                <span>
+                                    <img src={soomgoImg} alt="" />
+                                </span>
+                                숨고
+                            </div>
                             <button type="button" className={styles.themeColor}>
                                 숨고 계정
                             </button>
-                        </p>
+                        </div>
                     </div>
                 </li>
             </ul>

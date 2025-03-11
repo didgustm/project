@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { projects } from "../list";
+import { projects } from "../../list";
 import aircleaView from "@assets/images/works/airclean.webp";
 
 function Airclean () {

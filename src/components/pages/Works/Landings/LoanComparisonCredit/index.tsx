@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { landings } from "../list";
+import { landings } from "../../list";
 
 function LoanComparisonCredit () {
     return (

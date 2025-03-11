@@ -1,5 +1,5 @@
 import Detail from "@components/templates/Detail";
-import { projects } from "../list";
+import { projects } from "../../list";
 import admPlatformView from "@assets/images/works/admPlatform.webp"
 
 function AdmPlatform () {

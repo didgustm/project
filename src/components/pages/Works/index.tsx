@@ -12,8 +12,9 @@ function Works () {
                     <li><Link to="/works/design-system"><p>카카오뱅크</p> 디자인 시스템</Link></li>
                     <li><Link to="/works/corevac">CoreVac</Link></li>
                     <li><Link to="/works/airclean">8282에어크린린</Link></li>
-                    {/* <li><Link to="/">패스트헌터 - 딜러</Link></li>
-                    <li><Link to="/">패스트헌터 </Link></li>
+                    <li className={styles.end}><Link to="/works/fhdealer"><p>패스트헌터</p> 딜러</Link></li>
+                    <li className={styles.end}><Link to="/works/fasthunter">패스트헌터 </Link></li>
+                    {/* 
                     <li><Link to="/">더 클라세움</Link></li>
                     <li><Link to="/">Stake</Link></li>
                     <li><Link to="/">LottoFly</Link></li>
@@ -35,6 +36,8 @@ function Works () {
                     <li><Link to="/works/safebox"><p>카카오뱅크</p> 세이프박스</Link></li>
                     <li><Link to="/works/fund"><p>카카오뱅크</p> 펀드</Link></li>
                     <li><Link to="/works/withdrawal"><p>카카오뱅크</p> 입출금통장</Link></li>
+                    <li className={styles.end}><Link to="/works/ddokgu"><p>카카오뱅크</p> 똑똑한 구독생활</Link></li>
+                    <li className={styles.end}><Link to="/works/heartDelivery"><p>카카오뱅크</p> 마음딜리버리</Link></li>
                 </ul>
             </Section>
         </>

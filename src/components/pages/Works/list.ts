@@ -24,7 +24,8 @@ export const projects = {
         Environment: "React, vite, typescript",
         Skills: "react-dnd-treeview",
         "My work": [
-            "admin 페이지 가이드파일 관리 화면(트리뷰, drag & drop, 수정, 조회, 삭제, 추가, 순서변경)",
+            "API 통신",
+            "admin 페이지 가이드파일 관리 화면(트리뷰, 목록 열기닫기, drag & drop, 수정, 조회, 삭제, 추가, 순서변경, 중복검사)",
             "DSP 페이지 광고 이력 관리 조회 화면(검색 필터링)"
         ]
     },
@@ -37,7 +38,8 @@ export const projects = {
         "My work": [
             "Docs > Install 페이지 제작",
             "Docs > Release Note 페이지 제작",
-            "공통컴포넌트 테스트용 SignIn 페이지 제작"
+            "소스 복사 클릭 이벤트 작업",
+            "공통컴포넌트 테스트용 SignIn 페이지 제작",
         ]
     },
     "corevac": {
@@ -66,6 +68,28 @@ export const projects = {
             "공통 레아아웃 설정",
             "라우트 페이지 설정",
             "Scss, ES6 빌드 설정",
+        ]
+    },
+    "fasthunterDealer": {
+        Name: "패스트헌터 딜러(종료)",
+        URL: "",
+        Device: "Mobile",
+        Environment: "HTML, css, JS",
+        Skills: "Swiper",
+        "My work": [
+            "패스트헌터 딜러 페이지 전체 코딩",
+            "회원가입, 차량등록, 관리자페이지, 게시판 등"
+        ]
+    },
+    "fasthunter": {
+        Name: "패스트헌터(종료)",
+        URL: "",
+        Device: "Mobile",
+        Environment: "HTML, css, JS",
+        Skills: "Swiper",
+        "My work": [
+            "패스트헌터 일부 페이지 코딩",
+            "관리자페이지 코딩"
         ]
     }
 }
@@ -103,8 +127,8 @@ export const landings = {
         Skills: "SVG 애니메이션",
         "My works": [
             "페이지 전체 코딩",
-            "그래프 애니메이션",
-            "숫자 카운트 애니메이션"
+            "그래프 형식 애니메이션 작업",
+            "관리비 금액 증가 애니메이션 작업"
         ]
     },
     "safebox": {
@@ -144,6 +168,34 @@ export const landings = {
             "loop 배너 애니메이션 수정",
             "간편이체 섹션 추가",
             "여유자금 섹션 추가"
+        ]
+    },
+    "heartDelivery": {
+        Name: "마음딜리버리(종료)",
+        URL: "",
+        Device: "App",
+        Environment: "HTML, Css, JS, webpack",
+        Skills: "confetti, gsap",
+        "My works": [
+            "마음딜리버리 이벤트 페이지 전체 코딩",
+            "하트 보내기, 하트 받기 페이지 분리",
+            "Step 넘어갈 때 마다 애니메이션 추가",
+            "유저 클릭 시 반응하는 애니메이션 작업",
+            "Input 포커스 시 키보드 영역에 대한 뷰포트 높이와 스크롤 대응"
+        ]
+    },
+    "ddokgu": {
+        Name: "똑똑한 구독생활(종료)",
+        URL: "",
+        Device: "App",
+        Environment: "HTML, Css, JS, webpack",
+        Skills: "gsap",
+        "My works": [
+            "똑똑한 구독생활 이벤트 페이지 전체 코딩",
+            "STEP 별 템플릿 분리",
+            "페이지 이동 시 FADE 효과 추가",
+            "추첨 볼 떨어지는 애니메이션 구현",
+            "터치 스크린으로 화면 전환 작업"
         ]
     }
 }
